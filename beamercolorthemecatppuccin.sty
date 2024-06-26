@@ -19,7 +19,7 @@
 %% version 2005/12/01 or later.
 %% 
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]
-\ProvidesPackage{beamercolorthemeCatppuccin}
+\ProvidesPackage{mystylefile/beamercolorthemeCatppuccin}
     [2024/02/27 v1.0.0 catppuccin beamer color theme]
 
 \@ifclassloaded{beamer}{
@@ -28,7 +28,7 @@
 \DeclareOptionBeamer{paletteOpts}{\def\beamer@catppuccintheme@paletteOpts{#1}}
 \ExecuteOptionsBeamer{style=Latte,paletteOpts=} % set default
 \ProcessOptionsBeamer
-\RequirePackage[\beamer@catppuccintheme@paletteOpts]{catppuccinPalette}
+\RequirePackage[\beamer@catppuccintheme@paletteOpts]{mystylefile/catppuccinPalette}
 \setbeamercolor*{structure}{
   bg=Cat\beamer@catppuccintheme@style Green!20,
   fg=Cat\beamer@catppuccintheme@style Green
