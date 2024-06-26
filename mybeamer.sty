@@ -1,6 +1,8 @@
 \usetheme[
   progressbar=foot,
-  numbering=fraction
+  numbering=fraction,
+  sectionpage=none,
+  subsectionpage=progressbar
 ]{metropolis}
 \usepackage{mystylefile/beamercolorthemeCatppuccin}
 
@@ -33,3 +35,23 @@ BoldFont={*-SemiBold}
 \usefonttheme{serif}
 
 \usepackage{datetime2}
+
+\RenewDocumentCommand\emph{ m }{{\usebeamercolor[fg]{structure}\bfseries #1}}
+
+\usepackage{makeidx}
+\makeindex
+
+\newenvironment{theindex}
+{\let\item\par
+  %definitions for subitem etc
+}{}
+\newcommand\indexspace{}
+
+\NewDocumentCommand\newword{ m }{\index{#1}\emph{#1}}
+
+\usepackage{listings}
+\lstset{
+  language=TeX,
+  basicstyle=\ttfamily
+}
+\lstMakeShortInline[columns=fixed]|
