@@ -1,0 +1,33 @@
+\usetheme[
+  progressbar=foot,
+  numbering=fraction
+]{metropolis}
+\usecolortheme{Catppuccin}
+
+\makeatletter
+\newcommand{\emphcolor}{Cat\beamer@catppuccintheme@style Sapphire}
+\setbeamercolor{structure}{
+  fg=\emphcolor
+}
+\setbeamercolor{frametitle}{
+  fg=Cat\beamer@catppuccintheme@style Base,
+  bg=\emphcolor
+}
+
+\setlength{\metropolis@progressinheadfoot@linewidth}{2pt}
+\makeatother
+
+\usepackage{luatexja-fontspec, unicode-math}
+\setmainjfont{GenEi M Gothic v2}[
+UprightFont={*-Regular},
+BoldFont={*-Bold},
+Scale=0.9,
+]
+\setmainfont{Fira Sans}[
+UprightFont={*-Regular},
+BoldFont={*-SemiBold}
+]
+\setmonofont{Fira Code}
+\setmonojfont{GenEi Mono Code}
+\setmathfont{Fira Math}
+\usefonttheme{serif}
